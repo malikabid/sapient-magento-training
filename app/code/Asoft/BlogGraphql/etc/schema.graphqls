@@ -1,0 +1,28 @@
+#type Query {
+ #   asBlogPosts(id:Int): [BlogPost] @resolver(class:"\\Asoft\\BlogGraphql\\Model\\Resolver\\Posts")
+#}
+
+type Query {
+    asBlogPosts(filter: BlogPostFilterInput): [BlogPost] @resolver(class:"\\Asoft\\BlogGraphql\\Model\\Resolver\\Posts")
+}
+
+type BlogPost {
+    post_id:Int,
+    name:String,
+    content:String
+}
+
+input IntFilterInput {
+    eq: Int
+    neq: Int
+    gt: Int
+    gte: Int
+    lt: Int
+    lte: Int
+    in: [Int]
+    nin: [Int]
+}
+
+input BlogPostFilterInput {
+    id: IntFilterInput
+}
