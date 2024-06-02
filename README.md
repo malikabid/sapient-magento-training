@@ -16,6 +16,7 @@ The repository is organized into the following branches/directories:
 
 - `HelloWorld`: How to create module and add block to store frontend.
 - `Breadcrumb`: How to use plugins.
+- `EventExample`: How To use Event Observers
 - `CustomMailer`: How To use Event Observers.
 - `Blog-V1`: Add new functionality to Magento 2. This module covers almost everthing including, Controllers, Views, Models, CRUD operations, configurations, admin interface, frontend interface, ui components, rest api's etc.
 - `Blog-v2`: Covers using repositories, service contracts, rest api data functionality
