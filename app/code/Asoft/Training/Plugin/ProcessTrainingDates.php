@@ -51,6 +51,8 @@ class ProcessTrainingDates
         if (is_callable([$extensionAttributes, 'setTrainingDateEnd'])) {
             $product->getExtensionAttributes()->setTrainingDateEnd($trainingDatesModel->getTrainingDateStart());
         }
+
+        return $product;
     }
 
 
