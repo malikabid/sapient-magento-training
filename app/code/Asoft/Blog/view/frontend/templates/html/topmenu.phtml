@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?= /* @noEscape */ $_menuHtml ?>
+        <?= $block->getChildHtml() ?>
+        <li class="level0 nav-2 category-item last level-top ui-menu-item">
+            <a href="/blog" class="level-top ui-menu-item-wrapper" id="ui-id-3" tabindex="-1" role="menuitem">
+                <span><?= __('Blog') ?></span>
+            </a>
+        </li>
+    </ul>
+</nav>

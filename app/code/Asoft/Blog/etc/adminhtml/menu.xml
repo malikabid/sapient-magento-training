@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Asoft_Blog::blog_elements" title="Blog" module="Asoft_Blog" sortOrder="10"
+            resource="Asoft_Blog::blog"
+            parent="Magento_Backend::content" />
+
+        <add id="Asoft_Blog::blog_post" title="Blog Post" module="Asoft_Blog"
+            resource="Asoft_Blog::blog_post" action="blog/post/index"
+            parent="Asoft_Blog::blog_elements" />
+    </menu>
+</config>

@@ -1,0 +1,13 @@
+<?php
+
+/** @var \Asoft\Blog\Block\Template $block */
+
+$post = $block->getBlogPost();
+?>
+
+<div class="template">
+    <h2>
+        <?= $post->getName(); ?>
+    </h2>
+    <p><?= $post->getContent(); ?></p>
+</div>

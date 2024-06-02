@@ -1,0 +1,15 @@
+<!--@subject {{trans "Your  Custom Email confirmation"}} @-->
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr>
+        <td>
+            <h2>New Custom Order Confirmation</h2>
+            <p>Hello {{var order.getCustomerFirstname()}}</p>
+            <p>Your order with Order number {{var order.getIncrementId()}} has be placed successfully.</p>
+            <p>Thank you!! Keep shopping with us..</p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

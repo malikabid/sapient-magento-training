@@ -1,0 +1,18 @@
+<?php
+
+/** @var \Asoft\Blog\Block\Template $block */
+
+$posts = $block->getPostList();
+// echo '<pre>';
+// var_dump($posts);
+?>
+
+<div class="template">
+    <?php foreach ($posts as $post) : ?>
+        <h2> <?= $post->getName(); ?></h2>
+        <p> <?= $post->getShortDescription() ?></p>
+        <a href="<?= $block->escapeUrl($post->getPostUrl()) ?>">
+            <?= __('Read More...'); ?>
+        </a>
+    <?php endforeach; ?>
+</div>
