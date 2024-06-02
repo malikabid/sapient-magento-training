@@ -20,6 +20,7 @@
     },
     "version": "2.4.7",
     "require": {
+        "colinmollenhour/php-redis-session-abstract": "1.5.5",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "^2.0.4",
         "magento/module-bundle-sample-data": "100.4.*",
