@@ -1,0 +1,4 @@
+type ProductInterface {
+    training_date_start: String @resolver(class: "Asoft\\TrainingGraphQl\\Model\\Resolver\\TrainingDateStart")
+    training_date_end: String @resolver(class: "Asoft\\TrainingGraphQl\\Model\\Resolver\\TrainingDateEnd")
+}

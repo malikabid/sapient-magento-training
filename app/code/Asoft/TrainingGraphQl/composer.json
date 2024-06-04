@@ -1,0 +1,17 @@
+{
+    "name": "asoft/traininggraphql",
+    "description": "",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "psr-4": {
+        "Asoft\\TrainingGraphQl\\": ""
+      },
+      "files": [
+        "registration.php"
+      ]
+    }
+  }
