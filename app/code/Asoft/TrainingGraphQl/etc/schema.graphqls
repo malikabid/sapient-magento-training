@@ -1,4 +1,4 @@
 type ProductInterface {
-    training_date_start: String @resolver(class: "Asoft\\TrainingGraphQl\\Model\\Resolver\\TrainingDateStart")
-    training_date_end: String @resolver(class: "Asoft\\TrainingGraphQl\\Model\\Resolver\\TrainingDateEnd")
+    training_date_start: String @resolver(class: "Asoft\\TrainingGraphQl\\Model\\Resolver\\TrainingDates")
+    training_date_end: String @resolver(class: "Asoft\\TrainingGraphQl\\Model\\Resolver\\TrainingDates")
 }
