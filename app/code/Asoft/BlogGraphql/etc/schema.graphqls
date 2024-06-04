@@ -1,0 +1,25 @@
+type Query {
+    asBlogPosts(filter:BlogPostFilterInput):[BlogPost] @resolver(class:"\\Asoft\\BlogGraphql\\Model\\Resolver\\Posts") @doc(description: "Get Blog Posts from Asoft Blog Module")
+}
+
+type BlogPost {
+    post_id:Int,
+    name:String,
+    content:String
+}
+
+input IntFilterInput {
+    eq: Int
+    neq: Int
+    gt: Int
+    gte: Int
+    lt: Int
+    lte: Int
+    in: [Int]
+    nin: [Int] 
+}
+
+input BlogPostFilterInput {
+    id: IntFilterInput
+}
+
