@@ -22,19 +22,19 @@
     </virtualType>
 
 
-    <type name="Asoft\Blog\Api\PostRepositoryInterface">
+    <!-- <type name="Asoft\Blog\Api\PostRepositoryInterface">
         <arguments>
             <argument name="postFactory" xsi:type="object">Asoft\Blog\Model\PostFactory</argument>
             <argument name="postCollectionFactory" xsi:type="object">
                 Asoft\Blog\Model\ResourceModel\Post\CollectionFactory</argument>
             <argument name="searchResultsFactory" xsi:type="object">
-                Asoft\Blog\Api\Data\PostSearchResultsInterfaceFactory</argument>
+                Asoft\Blog\Api\Data\PostSearchResultInterfaceFactory</argument>
             <argument name="collectionProcessor" xsi:type="object">
                 Magento\Framework\Api\SearchCriteria\CollectionProcessor</argument>
         </arguments>
-    </type>
+    </type> -->
 
-    <preference for="Asoft\Blog\Api\Data\PostSearchResultsInterface"
+    <preference for="Asoft\Blog\Api\Data\PostSearchResultInterface"
         type="Asoft\Blog\Model\Api\PostSearchResult" />
 
 </config>

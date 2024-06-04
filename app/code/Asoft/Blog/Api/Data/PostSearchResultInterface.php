@@ -8,5 +8,10 @@ use Magento\Framework\Api\SearchResultsInterface;
 interface PostSearchResultInterface extends SearchResultsInterface
 {
 
-    public function getItems(): PostInterface;
+    /**
+     * Undocumented function
+     *
+     * @return \Asoft\Blog\Api\Data\PostInterface[]
+     */
+    public function getItems();
 }

@@ -2,9 +2,11 @@
 
 namespace Asoft\Blog\Model;
 
+use Asoft\Blog\Api\Data\PostInterface;
 use Magento\Framework\Model\AbstractModel;
 
-class Post extends AbstractModel
+
+class Post extends AbstractModel implements PostInterface
 {
     private $_helper;
 
@@ -66,5 +68,51 @@ class Post extends AbstractModel
     public function getPostUrl()
     {
         return $this->_helper->getBlogUrl($this);
+    }
+
+
+    /**
+     * Undocumented function
+     *
+     * @return integer
+     */
+    public function getPostId(): int
+    {
+        return $this->getData(self::ENTITY_ID);
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->getData(self::NAME);
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return string
+     */
+    public function getContent(): string
+    {
+        return $this->getData(self::CONTENT);
+    }
+
+    public function setPostId(int $postId): void
+    {
+        $this->setData(self::ENTITY_ID, $postId);
+    }
+
+    public function setName(string $title): void
+    {
+        $this->setData(self::NAME, $title);
+    }
+
+    public function setContent(string $content): void
+    {
+        $this->setData(self::CONTENT, $content);
     }
 }
