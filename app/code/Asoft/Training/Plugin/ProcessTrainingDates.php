@@ -55,6 +55,25 @@ class ProcessTrainingDates
         return $product;
     }
 
+    public function afterGetById(ProductRepositoryInterface $productRepository, ProductInterface $product)
+    {
+        $trainingDatesModel = $this->getTrainingDatesByProduct($product);
+
+        if ($trainingDatesModel === null) {
+            return $product;
+        }
+
+        $extensionAttributes = $product->getExtensionAttributes();
+        if (is_callable([$extensionAttributes, 'setTrainingDateStart'])) {
+            $product->getExtensionAttributes()->setTrainingDateStart($trainingDatesModel->getTrainingDateStart());
+        }
+
+        if (is_callable([$extensionAttributes, 'setTrainingDateEnd'])) {
+            $product->getExtensionAttributes()->setTrainingDateEnd($trainingDatesModel->getTrainingDateEnd());
+        }
+
+        return $product;
+    }
 
 
     private function getTrainingDatesByProduct(ProductInterface $product): TrainingDate

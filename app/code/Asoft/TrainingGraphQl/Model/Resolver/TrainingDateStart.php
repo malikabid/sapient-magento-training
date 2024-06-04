@@ -24,7 +24,10 @@ class TrainingDateStart implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        $product = $this->productRepository->getById($value['id']);
-        return $product->getCustomAttribute('training_date_end') ? $product->getCustomAttribute('training_date_end')->getValue() : null;
+        // $product = $this->productRepository->getById($value['id']);
+        $product = $value['model'];
+        $product =  $this->productRepository->getById($product->getId());
+        $trainingDateStart = $product->getExtensionAttributes()->getTrainingDateStart();
+        return $trainingDateStart ?? null;
     }
 }
