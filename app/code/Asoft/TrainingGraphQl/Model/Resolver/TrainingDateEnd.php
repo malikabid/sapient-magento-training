@@ -24,9 +24,7 @@ class TrainingDateEnd implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        // $product = $this->productRepository->getById($value['id']);
-        $product = $value['model'];
-        $product =  $this->productRepository->getById($product->getId());
+        $product = $this->productRepository->getById($value['entity_id']);
         $trainingDateEnd = $product->getExtensionAttributes()->getTrainingDateEnd();
         return $trainingDateEnd ?? null;
     }
